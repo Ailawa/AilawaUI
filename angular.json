@@ -22,7 +22,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "node_modules/bootstrap-icons/bootstrap-icons.svg"
+              {
+                "glob": "*",
+                "input": "node_modules/bootstrap-icons/bootstrap-icons.svg",
+                "output": "assets/icons/"
+              }
+              
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
