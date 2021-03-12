@@ -1,12 +1,12 @@
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
 
-    <h1 class="logo mr-auto"><a href="#"><span>Ail</span>awa</a></h1>
+    <h1 class="logo mr-auto"><a routerLink="Home"><span>Ail</span>awa</a></h1>
 
     <nav class="nav-menu d-none d-lg-block">
       <ul>
-        <li><a routerLink="Home" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="NewCase" routerLinkActive="active">New Case</a></li>
+        <li routerLinkActive="active"><a routerLink="Home">Home</a></li>
+        <li routerLinkActive="active"><a routerLink="NewCase">New Case</a></li>
         <li><a href="#">Verification</a></li>
         <li><a href="#">FE Details</a></li>
         <li><a href="#">Locations</a></li>
@@ -16,16 +16,13 @@
   </div>
 </header>
 
-<section id="services" class="services section-bg">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <p></p>
-    </div>
-    <div class="row">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-</section>
+
+  
+
+    <router-outlet></router-outlet>
+
+
+
 
 <footer id="footer">
   <div class="container d-md-flex py-4">
