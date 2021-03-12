@@ -24,8 +24,8 @@
               "src/assets",
               {
                 "glob": "*",
-                "input": "node_modules/bootstrap-icons/bootstrap-icons.svg",
-                "output": "assets/icons/"
+                "input": "../node_modules/bootstrap-icons/bootstrap-icons.svg",
+                "output": "src/assets/icons/"
               }
               
             ],
