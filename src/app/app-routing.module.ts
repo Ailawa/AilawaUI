@@ -7,6 +7,7 @@ import { NewCaseSecuritiasComponent } from './NewCase/new-case-securitias/new-ca
 
 
 const routes: Routes = [
+  { path: "", redirectTo: "Home", pathMatch: "full" },
   { path: "Home", component: HomeComponent },
   {
     path: "NewCase", component: NewCaseHomeComponent, children: [
