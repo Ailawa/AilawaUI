@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SecuritasService } from 'src/app/service/securitas.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { SecuritasService } from 'src/app/service/securitas.service';
   styleUrls: ['./new-case-securitias.component.css']
 })
 export class NewCaseSecuritiasComponent implements OnInit {
-  @ViewChild('fileInput') fileInput: ElementRef;
+  @ViewChild('fileInput') fileInput;
   message: string;
 
   constructor(private service: SecuritasService) { }
