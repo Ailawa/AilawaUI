@@ -4,8 +4,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class SecuritasService {
-  url = "";
+export class CaseUploadService {
+
+  url = "http://localhost:5000/api/UploadCase/UploadExcel";
 
   constructor(private http: HttpClient) { }
 
