@@ -10,7 +10,7 @@ export class CaseUploadService {
 
   constructor(private http: HttpClient) { }
 
-  UploadExcel(formDate: FormData) {
+  UploadExcel(formData: FormData) {
 
     let headers = new HttpHeaders();
     headers.append('content-type', 'multipart/form-data');
@@ -18,6 +18,6 @@ export class CaseUploadService {
 
     const httpOptions = {headers : headers};
 
-    return this.http.post(this.url, formDate, httpOptions);
+    return this.http.post(this.url, formData, httpOptions);
   }
 }

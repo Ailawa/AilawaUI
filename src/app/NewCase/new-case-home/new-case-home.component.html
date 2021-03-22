@@ -1,18 +1,12 @@
 <section id="services" class="services section-bg">
-<section id="portfolio" class="portfolio">
-    <div class="row" data-aos="fade-up">
-        <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-                <li routerLink="Securitas" routerLinkActive="filter-active">Securitas</li>
-                <li routerLink="KPMG" routerLinkActive="filter-active">KPMG</li>
-                <li>Viztar</li>
-                <li>ACheck</li>
-                <li>FADVRSV</li>
-            </ul>
+    <section id="portfolio" class="portfolio">
+        <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-flters" *ngFor="let vendor of vendorDetails">
+                    <li (click)="SelectVendor(vendor)" class="'filter-active'">{{vendor.vendorName}}</li>
+                </ul>
+            </div>
         </div>
-    </div>
-
-    <router-outlet></router-outlet>
-
-</section>
+    </section>
+    <app-new-case-upload *ngIf="VendorMasterID" [VendorMasterID]="VendorMasterID" [VendorName]="VendorName"></app-new-case-upload>
 </section>
