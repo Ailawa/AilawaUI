@@ -9,6 +9,7 @@ import { CaseUploadService } from 'src/app/service/case-upload.service';
 export class NewCaseUploadComponent implements OnChanges {
   @ViewChild('fileInput') fileInput: ElementRef;
   message: string;
+  msgClass: string;
   @Input() VendorMasterID: string;
   @Input() VendorName: string;
   uploadDisable: boolean = true;
@@ -29,22 +30,29 @@ export class NewCaseUploadComponent implements OnChanges {
         formData.append('VendorName', this.VendorName);
 
         this.service.UploadExcel(formData).subscribe(res => {
+          console.log(res);
+
           this.message = res.toString();
+          this.msgClass = "alert-success";
         },
           (error) => {
+            console.log(error);
             this.message = "Error in Upload";
+            this.msgClass = "alert-danger";
             this.fileInput.nativeElement.value = null;
           }
         )
       }
-      else{
+      else {
+        this.msgClass = "alert-secondary";
         this.message = "Please upload only excel file.";
         this.fileInput.nativeElement.value = null;
       }
     }
-    else
+    else {
+      this.msgClass = "alert-info";
       this.message = "Please select a Excel file for Upload";
-
+    }
   }
 
   CloseMessage() {

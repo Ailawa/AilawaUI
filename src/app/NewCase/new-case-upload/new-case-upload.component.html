@@ -1,7 +1,7 @@
 <div class="contact">
     <div class="container col-lg-10 php-email-form">
         <div *ngIf="message" class="offset-lg-2 col-lg-7">
-            <div class="alert alert-danger fade show">
+            <div class="alert fade show" [ngClass]="msgClass">
                 <strong>Error!</strong> {{message}}
                 <a (click)="CloseMessage()" type="button" class="close"><span>&times;</span>
                 </a>
