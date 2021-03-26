@@ -1,16 +1,20 @@
-<section id="contact" class="contact">
-    <div class="container col-lg-10 justify-content-center php-email-form">
-        <br>
+<div class="contact">
+    <div class="container col-lg-10 php-email-form">
+        <div *ngIf="message" class="offset-lg-2 col-lg-7">
+            <div class="alert alert-danger fade show">
+                <strong>Error!</strong> {{message}}
+                <a (click)="CloseMessage()" type="button" class="close"><span>&times;</span>
+                </a>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-5 offset-lg-2">
                 <input class="form-control" type="file" #fileInput />
             </div>
-            <div class="col-md-6">
-                <button class="btn btn-primary" (click)="uploadFile();">Upload Excel</button>
+            <div class="col-lg-3">
+                <button class="btn btn-primary" [disabled]="uploadDisable" (click)="uploadFile();">Upload {{VendorName}}
+                    Excel</button>
             </div>
         </div>
-        <div>
-            <h4 class="alert-success">{{message}}</h4>
-        </div>
     </div>
-</section>
+</div>

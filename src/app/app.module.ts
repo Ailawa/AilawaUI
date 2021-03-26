@@ -8,8 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './Home/home/home.component';
 import { NewCaseHomeComponent } from './NewCase/new-case-home/new-case-home.component';
 import { NewCaseUploadComponent } from './NewCase/new-case-upload/new-case-upload.component';
-
-
+import { NewCaseDetailsComponent } from './NewCase/new-case-details/new-case-details.component';
 
 
 @NgModule({
@@ -17,7 +16,8 @@ import { NewCaseUploadComponent } from './NewCase/new-case-upload/new-case-uploa
     AppComponent,
     HomeComponent,
     NewCaseHomeComponent,
-    NewCaseUploadComponent
+    NewCaseUploadComponent,
+    NewCaseDetailsComponent
   ],
   imports: [
     BrowserModule,
